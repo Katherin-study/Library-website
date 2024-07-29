@@ -1,0 +1,108 @@
+body{
+    background-color: #FBFAF5;
+    font-size: 14px;
+    font-family: "Montserrat";
+    text-transform: uppercase;
+}
+a, a:visited, a:hover{
+    color: #FBFAF5;
+}
+header{
+    background-color: #B72100;
+    color: #FBFAF5;
+    padding: 20px;
+}
+.header_header{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+.header_header_text, .header_header_catalog, .header_header_pa, .main_count_ph, .main_count_author, .main_count_genre, .main_statistics_header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header_header_text p:nth-of-type(1){
+    font-size: 55px;
+    font-weight: 500;
+}
+.header_header_text p:nth-of-type(2){
+    font-size: 20px;
+}
+.main{
+    display: grid;
+    grid-template-rows: 1.5fr 0.5fr;
+}
+.main_count{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 70px 30px;
+}
+.main_count_ph, .main_count_genre{
+    width: 400px;
+    height: 400px;
+}
+.main_count_author{
+}
+.main_count_author p:nth-of-type(1){
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.main_count_author p:nth-of-type(2){
+    font-size: 55px;
+    font-weight: 500;
+    text-align: center;
+}
+.main_statistic{
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    margin: 70px 30px;
+}
+.main_statistics_header{
+    font-size: 30px;
+    font-weight: 500;
+}
+.main_statistics_main, .sex_text, .age_text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.sex, .age{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    justify-content: center;
+    margin: 40px 20px 100px 20px;
+}
+.sex_text{
+    justify-content: space-between;
+}
+.sex_container, .age_container{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    width: 350px;
+    height: 40px;
+}
+.male{
+    background-color: #424b6e;
+}
+.female{
+    background-color: #ff9b9b;
+}
+.age_1{
+    background-color: #df9c8e;
+}
+.age_2{
+    background-color: #d78471;
+}
+.age_3{
+    background-color: #cf6b55;
+}
+.age_4{
+    background-color: #c75239;
+}
+.age_5{
+    background-color: #bf3a1c;
+}
+.age_6{
+    background-color: #b72100;
+}
