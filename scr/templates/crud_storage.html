@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library personal account</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='nullstyle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="header_header">
+            <div class="header_header_main"><a href="/">главная</a></div>
+            <div class="header_header_text"><p>пушкинская</p><p>библиотека</p></div>
+            <div class="header_header_catalog"><a href="/catalog">каталог</a></div>
+        </div>
+        <div class="header_select">
+            <a href="/books">книга</a>
+            <a href="/employees">работник</a>
+            <a href="/publishing_houses">издательство</a>
+            <a href="/customers">читатель</a>
+            <a href="/form">формуляр</a>
+            <a href="/ratings">рейтинг</a>
+        </div>
+    </header>
+    <main class="main">
+        <div class="button_container">
+            <button id="save"> Сохранить </button> 
+            <button id="add"> Добавить </button>
+        </div>
+        <div class="table_header"> Хранение книг библиотеки </div>
+        <table id="readerTable">
+            <thead>
+                <tr>
+                    <th>Книга</th>
+                    <th>Отвественный</th>
+                    <th>Стеллаж</th>
+                    <th>Полка</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="readerTableBody">
+            </tbody>
+        </table>
+        <div id="overlay_delete" class="overlay">
+                <div id="delete-form" class="form">
+                    <label>Вы уверены, что хотите удалить данные о хранении книги?</label>
+                    <button id="delete-submit">УДАЛИТЬ</button>
+                </div>
+        </div>
+        <div id="overlay_add" class="overlay">
+                <div id="add-form">
+                    <label>Книга: <select id="add-book" required> </select></label>
+                    <label>Отвественный: <select id="add-employee" required> </select></label>
+                    <label>Стеллаж: <input type="text" id="add-shelving" required></label>
+                    <label>Полка: <input type="text" id="add-shelf" required></label>
+                    <button id="add-submit" disabled>ГОТОВО</button>
+                </div>
+        </div>
+        <form id="overlay_change" class="overlay">
+            <div id="change-form">
+                <label>Книга: <select id="change-book" required> </select></label>
+                <label>Отвественный: <select id="change-employee" required> </select></label>
+                <label>Стеллаж: <input type="text" id="change-shelving" required></label>
+                <label>Полка: <input type="text" id="change-shelf" required></label>
+                <button id="change-submit" type="submit">СОХРАНИТЬ</button>
+            </div>
+        </form>
+    </main>
+    <script src="{{ url_for('static', filename='js_crud_storage.js') }}"></script>
+</body>
+</html>

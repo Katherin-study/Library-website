@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library main</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='nullstyle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_main.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="header_header">
+            <div class="header_header_catalog"><a href="/catalog">каталог</a></div>
+            <div class="header_header_text"><p>пушкинская</p><p>библиотека</p></div>
+            <div class="header_header_pa"><a href="/personal_account">личный кабинет</a></div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="main_count">
+            <div class="main_count_genre">
+                <canvas id="genrePieChart"></canvas>
+            </div>
+            <div class="main_count_author">
+                <p>Автор месяца</p><p>Джоан Роулинг</p>
+            </div>
+            <div class="main_count_ph">
+                <canvas id="phPieChart"></canvas>
+            </div>
+        </section>
+        <section class="main_statistics">
+            <div class="main_statistics_header">Статистика читателей</div>
+            <div class="main_statistics_main">
+                <div class="sex">
+                    <div class="sex_text"><p>жен</p><p>муж</p></div>
+                    <div class="sex_container" id="sex_container">
+                    </div>
+                </div>
+                <div class="age">
+                    <div class="age_text"><p>18</p> <p>25</p> <p>35</p> <p>50</p> <p>60</p></div>
+                    <div class="age_container" id="age_container">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='js_main.js') }}"></script>
+</body>
+</html>

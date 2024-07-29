@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library catalog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='nullstyle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_catalog.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="header_header">
+            <div class="header_header_catalog"><a href="/">главная</a></div>
+            <div class="header_header_text"><p>пушкинская</p><p>библиотека</p></div>
+            <div class="header_header_pa"><a href="/personal_account">личный кабинет</a></div>
+        </div>
+    </header>
+    <main class="main">
+        <form id="form">
+            <div class="wrapper">
+                <div class="wrapper2">
+                    <label>
+                    <input type="radio" name="option" value="Психология">
+                    психология
+                    </label>
+                    <label>
+                    <input type="radio" name="option" value="Иностранная классика">
+                    иностранная классика
+                    </label>
+                    <label>
+                    <input type="radio" name="option" value="Приключения">
+                    приключения
+                    </label>
+                </div>
+                <div class="wrp">
+                    <div class="wrapper1">
+                        <label>
+                        <input type="radio" name="option" value="Детектив">
+                        детектив
+                        </label>
+                        <label>
+                        <input type="radio" name="option" value="Русская классика">
+                        русская классика
+                        </label>
+                        <label>
+                        <input type="radio" name="option" value="Научпоп">
+                        научпоп
+                        </label>
+                        <label>
+                        <input type="radio" name="option" value="Фэнтези">
+                        фэнтези
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <button id="delete"> Сбросить </button>
+        <section class="books">
+            <div class="books_gallery" id="books_gallery">
+                
+            </div>
+        </section>
+    </main>
+    <script src="{{ url_for('static', filename='js_catalog.js') }}"></script>
+</body>
+</html>

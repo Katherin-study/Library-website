@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library personal account</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='nullstyle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_pa.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="header_header">
+            <div class="header_header_main"><a href="/">главная</a></div>
+            <div class="header_header_text"><p>пушкинская</p><p>библиотека</p></div>
+            <div class="header_header_catalog"><a href="/catalog">каталог</a></div>
+        </div>
+    </header>
+    <main class="main">
+        <a id="admin">Войти как администратор</a>
+        <div class="name">
+            <input id="name" type="text" placeholder="Введите ФИО читателя..."/>
+        </div>
+        <button id="check"> Проверить задолженности </button>
+        <section class="debts">
+            <div class="debts_gallery" id="debts_gallery">
+            </div>
+        </section>
+        <div id="overlay">
+            <div class="overlay-content">
+                <h2>Для входа введите пароль:</h2>
+                <form id="passwordForm">
+                    <input type="password" id="passwordInput" required>
+                    <button type="submit">Войти</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="{{ url_for('static', filename='js_personal_account.js') }}"></script>
+</body>
+</html>
